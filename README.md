@@ -7,7 +7,7 @@ Current Version: v1.0
 
 Running with the following versions of the LivePerson Messaging SDK
 
-+ [iOS SDK v4.1.0](https://github.com/LP-Messaging/iOS-Messaging-SDK/releases/tag/4.1.0)
++ [iOS SDK v5.1.0](https://github.com/LP-Messaging/iOS-Messaging-SDK/releases/tag/5.1.0)
 + [Android SDK v4.3.1](https://github.com/LP-Messaging/Android-Messaging-SDK/releases/tag/v4.3.1)
 
 # Installing / Getting started
@@ -35,8 +35,8 @@ cordova plugin add ../../plugins/MessagingSDKPlugin
 
 To use the LivePerson In-App Messaging SDK, the following are required:
 
-+ XCode 9.1 or later
-+ Swift 4.0 or later, or Objective-C
++ XCode 11 or later
++ Swift 5.0, or Objective-C
 
 For latest information please refer to [LivePerson Developers Site](https://developers.liveperson.com/index.html)
 
