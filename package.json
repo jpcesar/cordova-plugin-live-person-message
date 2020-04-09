@@ -1,7 +1,7 @@
 {
-  "name": "MessagingSDKPlugin",
-  "version": "2.7.1",
-  "description": "Cordova LP MessagingSDKPlugin",
+  "name": "cordova-plugin-live-person-message",
+  "version": "2.7.2",
+  "description": "Cordova LivePerson Messaging Plugin",
   "cordova": {
     "id": "com.liveperson.messagingSDK",
     "platforms": [
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nvhai142/LPMessageSDKCordova.git"
+    "url": "git+https://github.com/TruewindIT/cordova-plugin-live-person-message.git"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -24,10 +24,10 @@
       "version": ">=3.4.0"
     }
   ],
-  "author": "Hai Nguyen",
+  "author": "Truewind IT",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nvhai142/LPMessageSDKCordova/issues"
+    "url": "https://github.com/TruewindIT/cordova-plugin-live-person-message/issues"
   },
-  "homepage": "https://github.com/nvhai142/LPMessageSDKCordova#readme"
+  "homepage": "https://github.com/TruewindIT/cordova-plugin-live-person-message#readme"
 }
