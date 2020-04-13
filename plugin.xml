@@ -10,7 +10,7 @@
 	<asset src="www/LPMessagingSDK.js" target="js/LPMessagingSDK.js"/>
 
 	<js-module src="www/LPMessagingSDK.js" name="lpMessagingSDK">
-		<clobbers target="lpMessagingSDK" />
+		<clobbers target="cordova.lpMessagingSDK" />
 	</js-module>
 
 	<!-- Android -->
