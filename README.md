@@ -12,23 +12,6 @@ Running with the following versions of the LivePerson Messaging SDK
 
 # Installing / Getting started
 
-### _"Where do I find the latest version of the plugin?"_
-
-Repo has been restructured.
-The plugin is now here:
-
-`/plugins/MessagingSDKPlugin`
-
-If you need to reinstall the plugin to your app, make sure you pull it from this folder.
-
-e.g if you were working in the sampleapp01 example folder
-
-```
-cd apps/sampleapp01
-cordova plugin remove com.liveperson.messagingSDK
-cordova plugin add ../../plugins/MessagingSDKPlugin
-```
-
 ## iOS 
 
 ### Prerequisites
@@ -42,7 +25,8 @@ For latest information please refer to [LivePerson Developers Site](https://deve
 
 ### Add iOS SDK Frameworks - Recommended via CocoaPods
 
-The SDK is also compatible with CocoaPods, a dependency manager for Swift and Objective-C Cocoa projects. CocoaPods has thousands of libraries and is used in over 2 million apps. It can help you scale your projects elegantly and provides a standard format for managing external libraries.
+The SDK is also compatible with CocoaPods, a dependency manager for Swift and Objective-C Cocoa projects. CocoaPods has thousands of libraries and is used in over 2 million apps. 
+It can help you scale your projects elegantly and provides a standard format for managing external libraries.
 
 1. Install cocoapods using the following command:
 
@@ -62,31 +46,6 @@ $ pod init
 
 [https://developers.liveperson.com/consumer-experience-ios-sdk-sampleapp.html#add-lpmessagingsdk-to-your-podfile](https://developers.liveperson.com/consumer-experience-ios-sdk-sampleapp.html#add-lpmessagingsdk-to-your-podfile)
 
-```
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
-
-source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/LivePersonInc/iOSPodSpecs.git'
-
-target '<YourApplicatioName>' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for <YourApplicatioName>
-  pod 'LPMessagingSDK','~>2.8.0.9'
-
-  target '<YourApplicatioName>Tests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target '<YourApplicatioName>UITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-end
-```
 
 4. Run the following command in the terminal under your project folder:
 
@@ -100,29 +59,6 @@ $ pod install
 $ pod update
 ```
 
-#### Podfile SDK Links for various versions FYI
-
-**SDK 2.5**
-
-Xcode 8:
-* Cocoapods version: 2.5.4.0.1212 
-* Libraries version 2.5.4:  https://github.com/LP-Messaging/iOS-Messaging-SDK/releases/tag/2.5.4
-
-**SDK 2.7**
-
-Xcode 8:
-* Cocoapods version: 2.7.1.0.1213
-* Libraries version 2.7.1: https://github.com/LP-Messaging/iOS-Messaging-SDK/releases/tag/2.7.1
-
-Xcode 9:
-* Cocoapods version: 2.7.1.1.1215
-* Libraries version 2.7.1 (using side branch): https://github.com/LP-Messaging/iOS-Messaging-SDK/tree/SDK_2.7_Swift_4.0
-
-**SDK 2.8**
-
-Xcode 9 only:
-* Cocoapods version (only): 2.8.3.0.1224
-* Libraries version 2.8.3: https://github.com/LP-Messaging/iOS-Messaging-SDK/releases/tag/2.8.3
 
 ### Installation of iOS Libraries by Copying to Xcode Project
 Copy all framework and bundle files into the project, including the bundle file In project settings, navigate to the General tab, and add all Framework files to the Embedded Binaries section.
@@ -171,31 +107,6 @@ The plugin itself does NOT include any copies of the Android SDK `aars` librarie
 
 <https://developers.liveperson.com/android-quickstart.html>
 
-**BUT ALWAYS CHECK GITHUB RELEASES LINK ABOVE FOR THE LATEST VERSION**
-
----
-
-## Sample Apps Included
-
-Within the `apps/` folder at the root of this repo you will find some sample apps demoing the plugin. Here is a breakdown.
-
-### `apps/sampleapp01` -- iOS Only
-
-Has been created as  reference app using iOS frameworks.
-
-This app does NOT include an Android application - refer to SampleApp03 for the latest Android example app.
-
-Includes a basic iOS Cordova App with Messaging integration and the PhoneGap Push plugin installed - but not with Simulator as restrictions prevent this...you will need to run on physical device.
-
-![screen shot 2017-04-20 at 22 50 14](https://cloud.githubusercontent.com/assets/10999907/25254104/c19f863e-261b-11e7-95ac-1affddb98db0.png)
-
-### `apps/sampleapp03` -- Android -- Authentication and Push Plugin
-
-+ includes authentication for both platforms
-+ phone gap push plugin RC 2.0 for Android and iOS
-  + working on Android
-
-
 ------
 
 ## Api Reference
@@ -215,13 +126,10 @@ lp_conversation_api: function(action, args, successCallback, errorCallback)
 Supported values for `action` :
 
 ---- 
-#### *************************** NEW IN v2.9.x *************************************
 
 ### `"close_conversation_screen"`
 
 sample call:
-
-
 
 ```js
 lpMessagingSDK.lp_conversation_api(
@@ -402,9 +310,6 @@ lpMessagingSDK.lp_conversation_api(
 ```
 
 + The SDK will pass the token back to LivePerson using the `reconnect` method of the SDK to refresh the token and continue authenticated conversations.
-
-
-
 
 ### `"set_lp_user_profile"`
 
@@ -594,7 +499,6 @@ Certain events are now returning immediate responses by triggering the respectiv
 
 
 #### Triggering asynchronously 
-
 
 
 + This will be the single handler for all the following async events
