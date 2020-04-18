@@ -17,8 +17,8 @@
 	<platform name="android">
 
 		<config-file target="res/xml/config.xml" parent="/*">
-			<feature name="LPMessagingSDK" >
-				<param name="android-package" value="com.liveperson.plugin.LPMessagingSDK"/>
+			<feature name="LPMessagingSDKPlugin" >
+				<param name="android-package" value="com.liveperson.plugin.LPMessagingSDKPlugin"/>
 			</feature>
 		</config-file>
 
@@ -32,7 +32,7 @@
         <framework src="com.liveperson.android:lp_messaging_sdk:4.3.+" />
 
         <!--  Plugin Code -->
-        <source-file src="src/android/LPMessagingSDK.java" target-dir="src/com/liveperson/plugin/" />
+        <source-file src="src/android/LPMessagingSDKPlugin.java" target-dir="src/com/liveperson/plugin/" />
 
         <resource-file src="src/android/res/values/branding.xml" target="res/values/branding.xml"/>
         <resource-file src="src/android/res/values/colors.xml" target="res/values/colors.xml"/>
