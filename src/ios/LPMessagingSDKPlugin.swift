@@ -60,9 +60,7 @@ extension String {
     override func pluginInitialize() {
         print("@@@ iOS pluginInitialize")
     }
-    
 
-    
     @objc(lp_sdk_init:)
     func lp_sdk_init(command: CDVInvokedUrlCommand) {
         guard let lpAccountNumber = command.arguments.first as? String else {
@@ -83,8 +81,7 @@ extension String {
             if let config = command.arguments.last as? [String:AnyObject] {
                 setSDKConfigurations(config: config)
             }
-            
-            
+
             LPMessagingSDK.instance.delegate = self
             self.set_lp_callbacks(command: command)
 
@@ -104,7 +101,6 @@ extension String {
             )
             
             print("@@@ iOS LPMessagingSDKInit")
-
 
         } catch let error as NSError {
   
@@ -159,9 +155,7 @@ extension String {
         print("@@@ tokenAsData \(tokenAsData)")
         
         print("@@@ string as 8 character chunks ... \(result)")
-        print("@@@ tokenAsString --> \(tokenAsString)" )
-        
-        
+        print("@@@ tokenAsString --> \(tokenAsString)" ) 
         
         return tokenAsData
     }
@@ -216,7 +210,6 @@ extension String {
             pluginResult,
             callbackId: self.registerLpPusherCallbackCommand!.callbackId
         )
-
         
     }
     
@@ -296,7 +289,7 @@ extension String {
         let jsonString = self.convertDicToJSON(dic: response)
         
         self.set_lp_callbacks(command: command)
-//        LPMessagingSDK.instance.logout()
+
         LPMessagingSDK.instance.logout(completion: {
             print("@@@ logout success!");
         }) { (error) in
@@ -319,6 +312,7 @@ extension String {
             print("Can't start without brandID")
             return
         }
+
         // init our callbacks for javascript wrapper
         self.set_lp_callbacks(command: command)
 
@@ -430,8 +424,6 @@ extension String {
 
         }
         
-        
-        
     }
     
     // MARK: MessagingSDK API
@@ -494,8 +486,7 @@ extension String {
             let pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAs:jsonString)
             
             pluginResult?.setKeepCallbackAs(true)
-            self.globalCallbackCommandDelegate?.send(pluginResult, callbackId: self.globalCallbackCommand?.callbackId)
-            
+            self.globalCallbackCommandDelegate?.send(pluginResult, callbackId: self.globalCallbackCommand?.callbackId)      
         }
         
     }
