@@ -24,9 +24,9 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LPMessagingSDK extends CordovaPlugin {
+public class LPMessagingSDKPlugin extends CordovaPlugin {
 
-    private static final String TAG = LPMessagingSDK.class.getSimpleName();
+    private static final String TAG = LPMessagingSDKPlugin.class.getSimpleName();
     public String LP_APP_PACKAGE_NAME;
 
     private static final String INIT = "lp_sdk_init";
