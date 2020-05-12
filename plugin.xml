@@ -42,6 +42,8 @@
 
 	<!-- iOS -->
 	<platform name="ios">
+		<dependency id="cordova-plugin-cocoapod-support"/>
+		
 		<hook type="after_platform_add" src="scripts/iosAfterPluginAdd.js" />
 		<config-file target="config.xml" parent="/*">
 			<feature name="LPMessagingSDKPlugin" >
@@ -49,11 +51,17 @@
 			</feature>
 		</config-file>
 
-		<framework src="src/ios/frameworks/LPInfra.framework" embed="true" custom="true" />
+		<pods-config ios-min-version="9.0" use-frameworks="true">
+           	  <!-- optionally add private spec sources -->
+          	  <source url="https://github.com/LivePersonInc/iOSPodSpecs.git"/>
+   		</pods-config>
+   	        <pod name="LPMessagingSDK" version="4.1.0.0.710" />
+		
+		<!--<framework src="src/ios/frameworks/LPInfra.framework" embed="true" custom="true" />
 		<framework src="src/ios/frameworks/LPMessagingSDK.framework" embed="true" custom="true" />
 		<framework src="src/ios/frameworks/LPAMS.framework" embed="true" custom="true" />
 		<framework src="src/ios/frameworks/LPMonitoring.framework" embed="true" custom="true" />
-		<resource-file src="src/ios/frameworks/LPMessagingSDKModels.bundle" custom="true"/>
+		<resource-file src="src/ios/frameworks/LPMessagingSDKModels.bundle" custom="true"/>-->
 		<source-file src="src/ios/LPMessagingSDKPlugin.swift" />
 		<source-file src="src/ios/LPMessagingSDKPlugin-Bridging-Header.h" />
 		
