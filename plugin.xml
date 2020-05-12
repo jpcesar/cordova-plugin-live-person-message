@@ -55,7 +55,7 @@
            	  <!-- optionally add private spec sources -->
           	  <source url="https://github.com/LivePersonInc/iOSPodSpecs.git"/>
    		</pods-config>
-		<pod name="LPMessagingSDK" spec="~> 4.1.0.0.710"/>
+		<pod name="LPMessagingSDK" spec="~> 4.1.0.0.710-Swift-5.1"/>
 		
 		<!--<framework src="src/ios/frameworks/LPInfra.framework" embed="true" custom="true" />
 		<framework src="src/ios/frameworks/LPMessagingSDK.framework" embed="true" custom="true" />
