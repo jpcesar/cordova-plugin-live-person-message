@@ -42,7 +42,7 @@
 
 	<!-- iOS -->
 	<platform name="ios">
-		<dependency id="cordova-plugin-cocoapod-support"/>
+		<dependency id="cordova-plugin-cocoapod-supportx"/>
 		
 		<hook type="after_platform_add" src="scripts/iosAfterPluginAdd.js" />
 		<config-file target="config.xml" parent="/*">
