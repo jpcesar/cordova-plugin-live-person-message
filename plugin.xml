@@ -47,7 +47,7 @@
 		
 
 		<hook type="after_platform_add" src="scripts/iosAfterPluginAdd.js" />
-		<hook type="after_plugin_install" src="scripts/dependencies.js" />
+
 		<config-file target="config.xml" parent="/*">
 			<feature name="LPMessagingSDKPlugin" >
 				<param name="ios-package" value="LPMessagingSDKPlugin"/>
