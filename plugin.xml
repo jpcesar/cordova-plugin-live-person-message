@@ -57,17 +57,11 @@
    		</pods-config>
 		<pod name="LPMessagingSDK" spec="~> 4.1.0.0.710-Swift-5.1"/>
 		
-		<!--<framework src="src/ios/frameworks/LPInfra.framework" embed="true" custom="true" />
-		<framework src="src/ios/frameworks/LPMessagingSDK.framework" embed="true" custom="true" />
-		<framework src="src/ios/frameworks/LPAMS.framework" embed="true" custom="true" />
-		<framework src="src/ios/frameworks/LPMonitoring.framework" embed="true" custom="true" />
-		<resource-file src="src/ios/frameworks/LPMessagingSDKModels.bundle" custom="true"/>-->
 		<source-file src="src/ios/LPMessagingSDKPlugin.swift" />
 		<source-file src="src/ios/LPMessagingSDKPlugin-Bridging-Header.h" />
 		
 		<!-- Add in the swift-support plugin by default -->
 		<dependency url="https://github.com/agoncalvesos/cordova-plugin-add-swift-support" commit="513e43f94ae94ad609d49f24e7dca23a4c358095" id="cordova-plugin-add-swift-support"/>
-
 
 	</platform>
 
