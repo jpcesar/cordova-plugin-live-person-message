@@ -42,7 +42,7 @@
 
 	<!-- iOS -->
 	<platform name="ios">
-		<dependency id="babel-plugin-lodash"/>
+
 		<dependency id="cordova-plugin-cocoapod-supportx"/>
 		
 
