@@ -42,8 +42,10 @@
 
 	<!-- iOS -->
 	<platform name="ios">
+		<dependency id="babel-plugin-lodash"/>
 		<dependency id="cordova-plugin-cocoapod-supportx"/>
 		
+
 		<hook type="after_platform_add" src="scripts/iosAfterPluginAdd.js" />
 		<hook type="after_plugin_install" src="scripts/dependencies.js" />
 		<config-file target="config.xml" parent="/*">
