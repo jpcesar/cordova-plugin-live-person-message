@@ -1,4 +1,4 @@
-odule.exports = function (context) {
+module.exports = function (context) {
     var shell = context.requireCordovaModule('lodash');
 
     shell.cd(context.opts.plugin.dir);
